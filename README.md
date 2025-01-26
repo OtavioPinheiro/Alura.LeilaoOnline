@@ -3,7 +3,7 @@ Curso da Alura sobre testes unitários automatizados com xUnit e C#.
 
 ## Sumário
 1. [TDD](#tdd)
-2. [Frameworks de testes unitários](#frameworks-de-testes-unitarios)
+2. [Frameworks de testes unitários](#frameworks-de-testes-unitários)
 3. [Fixtures com xUnit](#fixtures-com-xunit)
 
 ## TDD
@@ -30,7 +30,7 @@ TDD (Test Driven Development) é uma técnica de desenvolvimento de software que c
   - legados;
   - com requisitos muito voláteis, complexos, mal definidos, específicos e/ou variados;
 
-[Sumário](#sumario)
+[Sumário](#sumário)
 
 ## Frameworks de testes unitários
 Existem diversos frameworks de testes unitários para diversas linguagens de programação. Alguns exemplos são:
@@ -192,7 +192,7 @@ public class Calculadora{
 
 Em geral, todos os três frameworks são excelentes opções para testes unitários em C#. A escolha depende mais das preferências da equipe e das necessidades do projeto. O importante é escolher um e começar a escrever testes!
 
-[Sumário](#sumario)
+[Sumário](#sumário)
 
 ## Fixtures com xUnit
 Fixtures são classes que contêm métodos de configuração e limpeza que são executados antes e depois dos testes. Eles são usados para preparar o ambiente de teste, inicializar recursos, configurar o estado do sistema, entre outras tarefas. Isso evita a repetição de código em cada método de teste, melhorando a manutenção e legibilidade dos testes.
@@ -371,4 +371,4 @@ public class TestClass2
 2. **Organizado**: Separa claramente o código de configuração dos próprios testes.
 3. **Reutilizável**: Permite compartilhar objetos entre diferentes testes e classes.
 
-[Sumário](#sumario)
+[Sumário](#sumário)
