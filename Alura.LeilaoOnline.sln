@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alura.LeilaoOnline.Core", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alura.LeilaoOnline.ConsoleApp", "Alura.LeilaoOnline.ConsoleApp\Alura.LeilaoOnline.ConsoleApp.csproj", "{866E5A49-FC38-4650-9C09-9C5637B9BB1F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alura.LeilaoOnline.Tests", "Alura.LeilaoOnline.Tests\Alura.LeilaoOnline.Tests.csproj", "{E546CE33-9201-4C02-B711-350E0335A98B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{866E5A49-FC38-4650-9C09-9C5637B9BB1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{866E5A49-FC38-4650-9C09-9C5637B9BB1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{866E5A49-FC38-4650-9C09-9C5637B9BB1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E546CE33-9201-4C02-B711-350E0335A98B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E546CE33-9201-4C02-B711-350E0335A98B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E546CE33-9201-4C02-B711-350E0335A98B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E546CE33-9201-4C02-B711-350E0335A98B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +38,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{763A3325-505E-438C-8436-CD7F335D5001} = {C80543F3-648E-4D63-8340-D1B47D3131C8}
 		{866E5A49-FC38-4650-9C09-9C5637B9BB1F} = {060B2CDE-6D52-42CE-A815-70B702D7E703}
+		{E546CE33-9201-4C02-B711-350E0335A98B} = {060B2CDE-6D52-42CE-A815-70B702D7E703}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F047DFFC-5A65-4C77-AB55-BBAE424F4A7D}
