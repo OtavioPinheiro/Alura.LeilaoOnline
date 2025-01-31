@@ -29,5 +29,23 @@ namespace Alura.LeilaoOnline.Tests
             var qtdeObtida = leilao.Lances.Count();
             Assert.Equal(qtdeEsperada, qtdeObtida);
         }
+
+        [Theory]
+        [InlineData(new double[] { 200, 300, 400, 500 })]
+        [InlineData(new double[] { 200 })]
+        [InlineData(new double[] { 200, 300, 400 })]
+        [InlineData(new double[] { 200, 300, 400, 500, 600, 700 })]
+        public void IgnoraLancesFeitosAntesDoInicioDoPregao(double[] ofertas)
+        {
+            var leilao = new Leilao("Van Gogh");
+            var fulano = new Interessada("Fulano de Tal", leilao);
+
+            foreach (var oferta in ofertas)
+            {
+                leilao.RecebeLance(fulano, oferta);
+            }
+
+            Assert.Empty(leilao.Lances);
+        }
     }
 }
