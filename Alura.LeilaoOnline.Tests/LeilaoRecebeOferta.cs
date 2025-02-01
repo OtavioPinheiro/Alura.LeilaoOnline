@@ -12,7 +12,8 @@ namespace Alura.LeilaoOnline.Tests
         public void NaoPermiteNovosLancesDadoLeilaoFinalizado(int qtdeEsperada, double[] ofertas)
         {
             //Arranje - cenário
-            var leilao = new Leilao("Van Gogh");
+            IModalidadeAvaliacao modalidade = new MaiorValor();
+            var leilao = new Leilao("Van Gogh", modalidade);
             var fulano = new Interessada("Fulano", leilao);
             var maria = new Interessada("Maria", leilao);
 
@@ -45,7 +46,8 @@ namespace Alura.LeilaoOnline.Tests
         [InlineData(new double[] { 200, 300, 400, 500, 600, 700 })]
         public void IgnoraLancesFeitosAntesDoInicioDoPregao(double[] ofertas)
         {
-            var leilao = new Leilao("Van Gogh");
+            IModalidadeAvaliacao modalidade = new MaiorValor();
+            var leilao = new Leilao("Van Gogh", modalidade);
             var fulano = new Interessada("Fulano de Tal", leilao);
 
             foreach (var oferta in ofertas)
@@ -60,7 +62,8 @@ namespace Alura.LeilaoOnline.Tests
         public void NaoAceitaProximoLanceDadosDoMesmoClienteRealizouUltimoLance()
         {
             //Arranje - cenário
-            var leilao = new Leilao("Van Gogh");
+            IModalidadeAvaliacao modalidade = new MaiorValor();
+            var leilao = new Leilao("Van Gogh", modalidade);
             var fulano = new Interessada("Fulano", leilao);
             leilao.IniciaPregao();
             leilao.RecebeLance(fulano, 800);
