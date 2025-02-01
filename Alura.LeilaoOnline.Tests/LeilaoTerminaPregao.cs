@@ -14,11 +14,19 @@ namespace Alura.LeilaoOnline.Tests
             //Arranje - cenário
             var leilao = new Leilao("Van Gogh");
             var fulano = new Interessada("Fulano", leilao);
+            var maria = new Interessada("Maria", leilao);
 
             leilao.IniciaPregao();
-            foreach(var valor in ofertas)
+            for (int i = 0; i < ofertas.Length; i++)
             {
-                leilao.RecebeLance(fulano, valor);
+                if ((i%2) == 0)
+                {
+                    leilao.RecebeLance(fulano, ofertas[i]);
+                }
+                else
+                {
+                    leilao.RecebeLance(maria, ofertas[i]);
+                }
             }
 
             //Act - método sob teste
@@ -30,11 +38,27 @@ namespace Alura.LeilaoOnline.Tests
         }
 
         [Fact]
+        public void LancaInvalidOperationExceptionDadoPregaoNaoIniciado()
+        {
+            //Arranje - cenário
+            var leilao = new Leilao("Van Gogh");
+
+            //Assert
+            var excecaoObtida = Assert.Throws<System.InvalidOperationException>(
+                //Act - método sob teste
+                () => leilao.TerminaPregao()
+            );
+            var msgEsperada = "Não é possível terminar o pregão sem que ele tenha começado. Para isso, utilize o método IniciaPregao().";
+            Assert.Equal(msgEsperada, excecaoObtida.Message);
+        }
+
+        [Fact]
         public void RetornaZeroDadoLeilaoSemLances()
         {
             //Arranje - cenário
             var leilao = new Leilao("Van Gogh");
-            
+            leilao.IniciaPregao();
+
             //Act - método sob teste
             leilao.TerminaPregao();
             
